@@ -49,12 +49,7 @@ terraform {
   }
 }
 
-provider "aws" {
-  assume_role {
-    role_arn     = "arn:aws:iam::${AWS_ACCOUNT_ID}:role/terraform-admin"
-    session_name = "TerraformSessionCI"
-  }
-}
+provider "aws" {}
 EOF
 
 echo -e "\nBackend configuration created successfully!\n"
