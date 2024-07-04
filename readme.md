@@ -34,4 +34,3 @@ terraform apply
 - Infrastructure as Code (IaC): Automate the provisioning of all necessary cloud components with Terraform, ensuring consistent and repeatable deployments.
 - Cost Optimization: Use Lambda functions to manage EKS resources dynamically, helping to optimize costs.
 - Scalability: Easily scale the solution to manage multiple EKS clusters and workloads.
-
