@@ -1,5 +1,5 @@
 resource "aws_scheduler_schedule" "event_scale_in" {
-  name                = "${var.project_name}-zeroscaler-scale-in"
+  name                = "${var.project_name}-scale-in"
   group_name          = "default"
   schedule_expression = var.scale_in_schedule
 
@@ -19,7 +19,7 @@ resource "aws_scheduler_schedule" "event_scale_in" {
 }
 
 resource "aws_scheduler_schedule" "event_scale_out" {
-  name                = "${var.project_name}-zeroscaler-scale-out"
+  name                = "${var.project_name}-scale-out"
   group_name          = "default"
   schedule_expression = var.scale_out_schedule
 

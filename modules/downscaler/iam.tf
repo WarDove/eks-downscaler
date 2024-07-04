@@ -48,7 +48,7 @@ data "aws_iam_policy_document" "downscaler_invoke_policy" {
 }
 
 resource "aws_iam_policy" "lambda_invoke_policy" {
-  name        = "${var.project_name}-zeroscaler-scheduler-policy"
+  name        = "${var.project_name}-scheduler-policy"
   description = "Allow function execution for scheduler role"
   policy      = data.aws_iam_policy_document.downscaler_invoke_policy.json
 }
@@ -64,7 +64,7 @@ data "aws_iam_policy_document" "downscaler_invoke_role" {
 }
 
 resource "aws_iam_role" "downscaler_invoke_role" {
-  name               = "${var.project_name}-zeroscaler-scheduler-role"
+  name               = "${var.project_name}-scheduler-role"
   assume_role_policy = data.aws_iam_policy_document.downscaler_invoke_role.json
 }
 
