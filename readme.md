@@ -1,6 +1,6 @@
 ![Logo](https://s3.eu-central-1.amazonaws.com/huseynov.tarlan/devops-bordered.png)
 
-# EKS-Downscaler Terraform/Lambda Project
+# From Code to Cloud with Terraform: EKS Golang Client - E2E Continious Deployment to AWS Lambda
 
 ## Overview
 Welcome to the EKS-Downscaler Lambda project! This guide walks you through setting up a seamless deployment of a compiled Lambda function that interacts with your EKS cluster using Terraform.
