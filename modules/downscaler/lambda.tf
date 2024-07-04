@@ -28,3 +28,10 @@ resource "aws_lambda_function" "downscaler_lambda" {
     variables = { CLUSTER_NAME = var.eks_cluster_name }
   }
 }
+
+resource "aws_eks_access_entry" "lambda" {
+  cluster_name      = var.eks_cluster_name
+  principal_arn     = aws_iam_role.lambda_role.arn
+  kubernetes_groups = var.eks_groups
+  type              = "STANDARD"
+}
