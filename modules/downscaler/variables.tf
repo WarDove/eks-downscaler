@@ -8,4 +8,5 @@ variable "scale_out_schedule" {}
 variable "eks_cluster_name" {}
 variable "eks_groups" {}
 variable "namespaces" {}
+variable "ci_env" {}
 

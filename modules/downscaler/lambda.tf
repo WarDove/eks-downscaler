@@ -5,6 +5,7 @@ resource "null_resource" "lambda_build" {
   }
 
   triggers = {
+    ci_env    = var.ci_env
     file_hash = md5(file("${var.lambda_source}/main.go"))
   }
 }
