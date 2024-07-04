@@ -1,6 +1,6 @@
 ![Logo](https://s3.eu-central-1.amazonaws.com/huseynov.tarlan/devops-bordered.png)
 
-# EKS-Downscaler Lambda Project
+# EKS-Downscaler Terraform/Lambda Project
 
 ## Overview
 Welcome to the EKS-Downscaler Lambda project! This guide walks you through setting up a seamless deployment of a compiled Lambda function that interacts with your EKS cluster using Terraform.
