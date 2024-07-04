@@ -25,6 +25,6 @@ resource "aws_lambda_function" "downscaler_lambda" {
   role             = aws_iam_role.lambda_role.arn
 
   environment {
-    variables = { CLUSTER_NAME = var.project_name }
+    variables = { CLUSTER_NAME = var.eks_cluster_name }
   }
 }
