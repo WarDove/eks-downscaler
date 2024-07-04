@@ -1,7 +1,7 @@
 resource "null_resource" "lambda_build" {
   provisioner "local-exec" {
     working_dir = var.lambda_source
-    command     = "go mod tidy && GOARCH=amd64 GOOS=linux go build -o /tmp/bootstrap main.go"
+    command     = "go mod tidy && GOARCH=amd64 GOOS=linux go build -o bootstrap main.go"
   }
 
   triggers = {
@@ -12,8 +12,8 @@ resource "null_resource" "lambda_build" {
 data "archive_file" "lambda_zip" {
   depends_on  = [null_resource.lambda_build]
   type        = "zip"
-  source_file = "/tmp/bootstrap"
-  output_path = "/tmp/main.zip"
+  source_file = "${var.lambda_source}/bootstrap"
+  output_path = "${var.lambda_source}/main.zip"
 }
 
 resource "aws_lambda_function" "downscaler_lambda" {

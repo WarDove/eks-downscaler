@@ -5,7 +5,6 @@
 *.dylib
 *.test
 *.out
-*.zip
 *.tar
 go.work
 .idea
