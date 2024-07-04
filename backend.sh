@@ -13,7 +13,7 @@ echo AWS_REGION: "${AWS_REGION}"
 echo AWS_PROFILE: "${AWS_PROFILE}"
 echo AWS_ACCOUNT_ID: "${AWS_ACCOUNT_ID}"
 echo BUCKET NAME: "terraform-tfstate-${PROJECT_NAME}"
-echo DYNAMODB TABLE NAME: terraform_locks
+echo DYNAMODB TABLE NAME: terraform-locks
 echo -e "\n"
 
 aws s3api create-bucket \
