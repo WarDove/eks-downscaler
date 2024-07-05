@@ -15,6 +15,24 @@ resource "aws_iam_role" "lambda_role" {
   assume_role_policy = data.aws_iam_policy_document.lambda_assume_role_policy.json
 }
 
+data "aws_iam_policy_document" "describe_cluster_policy" {
+  statement {
+    actions   = ["eks:DescribeCluster"]
+    resources = ["*"]
+  }
+}
+
+resource "aws_iam_policy" "describe_cluster_policy" {
+  name   = "${var.project_name}-describe-cluster"
+  policy = data.aws_iam_policy_document.describe_cluster_policy.json
+  tags   = local.default_tags
+}
+
+resource "aws_iam_role_policy_attachment" "lambda_describe_cluster_policy" {
+  role       = aws_iam_role.lambda_role.name
+  policy_arn = aws_iam_policy.describe_cluster_policy.arn
+}
+
 data "aws_iam_policy_document" "lambda_logging_policy" {
 
   statement {
