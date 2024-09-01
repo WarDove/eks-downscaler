@@ -7,7 +7,7 @@
 Welcome to the EKS-Downscaler Lambda project! This guide walks you through setting up a seamless deployment of a compiled Lambda function that interacts with your EKS cluster using Terraform.
 
 ## Guide/Reference
-https://dev.to
+[dev.to article](https://dev.to/wardove/from-code-to-cloud-with-terraform-eks-golang-client-e2e-aws-lambda-cicd-with-iac-2id8)
 
 ## Installation
 To get started, ensure you have the following prerequisites installed:
